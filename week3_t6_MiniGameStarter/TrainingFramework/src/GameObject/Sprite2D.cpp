@@ -101,7 +101,7 @@ void Sprite2D::Update(GLfloat deltatime)
 {
 }
 
-void Sprite2D::Set2DPosition(GLint x, GLint y)
+void Sprite2D::Set2DPosition(float x, float y)
 {
 	m_position = Vector3((float)x, (float)y, 0.0f);
 	CalculateWorldMatrix();
@@ -119,4 +119,32 @@ void Sprite2D::SetSize(GLint width, GLint height)
 	m_iHeight = height;
 	m_scale = Vector3((GLfloat)m_iWidth, (GLfloat)m_iHeight, 1.0f);
 	CalculateWorldMatrix();
+}
+void Sprite2D::Move(float deltaTime, Vector2 direction, float velocity) {
+	Set2DPosition(m_position.x + deltaTime * velocity * direction.x, m_position.y + deltaTime * velocity * direction.y);
+}
+bool Sprite2D::Is_Out_Of_Screen(float tube_width) {
+	return m_position.x < -tube_width;
+}
+int Sprite2D::Get_position_x() {
+	return m_position.x;
+}
+int Sprite2D::Get_position_y() {
+	return m_position.y;
+}
+void Sprite2D::Reset_position_dow(int tube_height1, int tube_x) {
+	Set2DPosition(Vector2(tube_x, 0 + tube_height1/2));
+}
+void Sprite2D::Reset_size_dow(int tube_height1) {
+	int tube_width = 50;
+	SetSize(tube_width, tube_height1);
+}
+void Sprite2D::Reset_position_up(int tube_height1) {
+	int temp = tube_height1 + 200 + (700 - tube_height1 - 200)/2;
+	Set2DPosition(Vector2(550, temp));
+}
+void Sprite2D::Reset_size_up(int tube_height1) {
+	int tube_width = 50;
+	int tube_height = 700 - tube_height1 - 200;
+	SetSize(tube_width, tube_height);
 }

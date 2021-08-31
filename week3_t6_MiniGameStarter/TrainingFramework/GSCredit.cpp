@@ -96,6 +96,7 @@ void GSCredit::Draw()
 	m_background->Draw();
 	m_text->Draw();
 	m_text1->Draw();
+	
 	for (auto it : m_listButton)
 	{
 		it->Draw();
