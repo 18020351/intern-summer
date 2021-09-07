@@ -26,22 +26,22 @@ void GSMenu::Init()
 
 	// play button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_play.tga");
-	std::shared_ptr<GameButton> button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(200, 400);
-	button->SetSize(55, 55);
-	button->SetOnClick([]() {
+	std::shared_ptr<GameButton> button_play = std::make_shared<GameButton>(model, shader, texture);
+	button_play->Set2DPosition(200, 400);
+	button_play->SetSize(55, 55);
+	button_play->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
 		});
-	m_listButton.push_back(button);
-	// option button
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_menu.tga");
-	std::shared_ptr<GameButton> button_menu = std::make_shared<GameButton>(model, shader, texture);
-	button_menu->Set2DPosition(200, 500);
-	button_menu->SetSize(55, 55);
-	button_menu->SetOnClick([]() {
-		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_OPTION);
+	m_listButton.push_back(button_play);
+	// setting button
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_settings.tga");
+	std::shared_ptr<GameButton> button_setting = std::make_shared<GameButton>(model, shader, texture);
+	button_setting->Set2DPosition(200, 500);
+	button_setting->SetSize(55, 55);
+	button_setting->SetOnClick([]() {
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_SETTING);
 		});
-	m_listButton.push_back(button_menu);
+	m_listButton.push_back(button_setting);
 	// credit button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_help.tga");
 	std::shared_ptr<GameButton> button_credit = std::make_shared<GameButton>(model, shader, texture);
@@ -53,25 +53,25 @@ void GSMenu::Init()
 	m_listButton.push_back(button_credit);
 	// exit button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_close.tga");
-	button = std::make_shared<GameButton>(model, shader, texture);
-	button->Set2DPosition(Globals::screenWidth - 50, 50);
-	button->SetSize(50, 50);
-	button->SetOnClick([]() {
+	std::shared_ptr<GameButton> button_close = std::make_shared<GameButton>(model, shader, texture);
+	button_close->Set2DPosition(Globals::screenWidth - 50, 50);
+	button_close->SetSize(50, 50);
+	button_close->SetOnClick([]() {
 		exit(0);
 		});
-	m_listButton.push_back(button);
+	m_listButton.push_back(button_close);
 
 	// game title
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
 	m_textGameName = std::make_shared< Text>(shader, font, "Duc.NV-Flappy Bird", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.7f);
 	m_textGamePlay = std::make_shared< Text>(shader, font, "Play", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
-	m_textGameOption = std::make_shared< Text>(shader, font, "Option", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
+	m_textGameSetting = std::make_shared< Text>(shader, font, "Setting", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
 	m_textGameCredit = std::make_shared< Text>(shader, font, "Credit", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
 
 	m_textGameName->Set2DPosition(Vector2(20, 300));
 	m_textGamePlay->Set2DPosition(Vector2(175, 450));
-	m_textGameOption->Set2DPosition(Vector2(165, 550));
+	m_textGameSetting->Set2DPosition(Vector2(165, 550));
 	m_textGameCredit->Set2DPosition(Vector2(165, 650));
 
 
@@ -132,6 +132,6 @@ void GSMenu::Draw()
 	}
 	m_textGameName->Draw();
 	m_textGamePlay->Draw();
-	m_textGameOption->Draw();
+	m_textGameSetting->Draw();
 	m_textGameCredit->Draw();
 }

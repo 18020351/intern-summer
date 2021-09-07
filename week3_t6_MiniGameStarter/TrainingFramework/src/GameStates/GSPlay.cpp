@@ -1,5 +1,4 @@
 #include "GSPlay.h"
-
 #include "Shader.h"
 #include "Texture.h"
 #include "Model.h"
@@ -10,8 +9,9 @@
 #include "Text.h"
 #include "GameButton.h"
 #include <string>
-
 #include "AnimationSprite.h"
+#include"classSound.h"
+using namespace std;
 
 GSPlay::GSPlay()
 {
@@ -29,8 +29,6 @@ std::string convert_int_to_string(int a) {
 }
 void GSPlay::Init()
 {
-
-	//
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 	auto texture = ResourceManagers::GetInstance()->GetTexture("./images/bg_play.tga");
 
@@ -80,7 +78,24 @@ void GSPlay::Init()
 		GameStateMachine::GetInstance()->PopState();
 		});
 	m_listButton.push_back(button);
-
+	// button pause
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_pause.tga");
+	std::shared_ptr<GameButton>  button_pause = std::make_shared<GameButton>(model, shader, texture);
+	button_pause->Set2DPosition(350, 50);
+	button_pause->SetSize(50, 50);
+	button_pause->SetOnClick([]() {
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PAUSE);
+		});
+	m_listButton.push_back(button_pause);
+	//button replay
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_restart.tga");
+	std::shared_ptr<GameButton>  button_replay = std::make_shared<GameButton>(model, shader, texture);
+	button_replay->Set2DPosition(200, 50);
+	button_replay->SetSize(50, 50);
+	button_replay->SetOnClick([]() {
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
+		});
+	m_listButton.push_back(button_replay);
 	// score
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
@@ -122,6 +137,10 @@ void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 		{
 		case ' ':
 			keyPressed |= KEY_UP;
+			if (Globals::isSound) {
+				sound_wing->PlaySound();
+			}
+			
 			break;
 		default:
 			break;
@@ -156,6 +175,7 @@ void GSPlay::HandleMouseMoveEvents(int x, int y)
 }
 ////collision handling
 bool GSPlay::Check_collision() {
+	
 	if ((m_bird->Get_position_y() - bird_height/2) <= 0) {
 		return true;
 	}
@@ -194,7 +214,6 @@ bool GSPlay::Check_collision() {
 void GSPlay::Update(float deltaTime)
 {
 	//collision handling
-	
 	if (Check_collision() == false) {
 		//move screen
 		m_tube1_dow->Move(deltaTime, Vector2(-1, 0), velocity);
@@ -250,6 +269,9 @@ void GSPlay::Update(float deltaTime)
 			std::string temp_score = convert_int_to_string(score);
 			m_score = std::make_shared< Text>(shader, font, temp_score, TextColor::RED, 1.0);
 			m_score->Set2DPosition(Vector2(5, 25));
+			if (Globals::isSound) {
+				sound_point->PlaySound();
+			}
 		}
 		if (m_bird->Get_position_x() >= m_tube2_dow->Get_position_x() + tube_width && tube2_pass == false) {
 			score += 1;
@@ -259,6 +281,9 @@ void GSPlay::Update(float deltaTime)
 			std::string temp_score = convert_int_to_string(score);
 			m_score = std::make_shared< Text>(shader, font, temp_score, TextColor::RED, 1.0);
 			m_score->Set2DPosition(Vector2(5, 25));
+			if (Globals::isSound) {
+				sound_point->PlaySound();
+			}
 		}
 		if (m_bird->Get_position_x() >= m_tube3_dow->Get_position_x() + tube_width && tube3_pass == false) {
 			score += 1;
@@ -268,6 +293,9 @@ void GSPlay::Update(float deltaTime)
 			std::string temp_score = convert_int_to_string(score);
 			m_score = std::make_shared< Text>(shader, font, temp_score, TextColor::RED, 1.0);
 			m_score->Set2DPosition(Vector2(5, 25));
+			if (Globals::isSound) {
+				sound_point->PlaySound();
+			}
 		}
 		//update level
 		if (score == 5) {
@@ -286,12 +314,12 @@ void GSPlay::Update(float deltaTime)
 		//move bird
 		if (keyPressed & KEY_UP) {
 			//move up bird.
-			y_bird -= 0.4;
-			m_bird->Set2DPosition(x_bird, y_bird);
+			y_bird -= 0.3;
+			m_bird->Set2DPosition(x_bird, y_bird);	
 		}
 		
 		if (!keyPressed) {
-			y_bird += 1.0;
+			y_bird += 0.8;
 			x_bird = x_bird;
 			m_bird->Set2DPosition(x_bird, y_bird);
 		}
@@ -301,13 +329,14 @@ void GSPlay::Update(float deltaTime)
 		}
 		m_bird->Update(deltaTime);
 	}
-	else {
+	else if(Check_collision() == true){	
 		auto shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 		std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
 		std::string temp_score = convert_int_to_string(score);
 		m_score = std::make_shared< Text>(shader, font, "Game over, " + temp_score, TextColor::RED, 1.0);
 		m_score->Set2DPosition(Vector2(60, 350));
 	}
+	
 	
 }
 
@@ -326,7 +355,6 @@ void GSPlay::Draw()
 	m_bird->Draw();
 
 	m_score->Draw();
-
 	m_sand->Draw();
 	for (auto it : m_listButton)
 	{

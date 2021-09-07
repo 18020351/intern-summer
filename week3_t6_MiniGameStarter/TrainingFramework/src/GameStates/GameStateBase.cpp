@@ -7,6 +7,8 @@
 #include "GSMenu.h"
 #include "../GSCredit.h"
 #include "GameStatebase.h"
+#include"GSTemp.h"
+#include"GSSetting.h"
 
 
 GameStateBase::GameStateBase(StateType stateType) : m_stateType(stateType)
@@ -30,6 +32,12 @@ std::shared_ptr<GameStateBase> GameStateBase::CreateState(StateType stt)
 		break;
 	case StateType::STATE_CREDIT:
 		gs = std::make_shared<GSCredit>();
+		break;
+	case StateType::STATE_PAUSE:
+		gs = std::make_shared<GSTemp>();
+		break;
+	case StateType::STATE_SETTING:
+		gs = std::make_shared<GSSetting>();
 		break;
 	default:
 		break;

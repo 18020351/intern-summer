@@ -27,7 +27,7 @@ private:
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 	std::shared_ptr<Text>					m_textGameName;
 	std::shared_ptr<Text>					m_textGameCredit;
-	std::shared_ptr<Text>					m_textGameOption;
+	std::shared_ptr<Text>					m_textGameSetting;
 	std::shared_ptr<Text>					m_textGamePlay;
 };
 

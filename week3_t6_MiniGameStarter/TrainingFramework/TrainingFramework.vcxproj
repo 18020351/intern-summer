@@ -345,6 +345,7 @@
   <ItemGroup>
     <ClCompile Include="GSCredit.cpp" />
     <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\classSound.cpp" />
     <ClCompile Include="src\GameManager\ResourceManagers.cpp" />
     <ClCompile Include="src\GameObject\AnimationSprite.cpp" />
     <ClCompile Include="src\GameObject\Font.cpp" />
@@ -361,11 +362,17 @@
     <ClCompile Include="src\GameStates\GSIntro.cpp" />
     <ClCompile Include="src\GameStates\GSMenu.cpp" />
     <ClCompile Include="src\GameStates\GSPlay.cpp" />
+    <ClCompile Include="src\GameStates\GSSetting.cpp" />
+    <ClCompile Include="src\GameStates\GSTemp.cpp" />
+    <ClCompile Include="src\SoundBuffer.cpp" />
+    <ClCompile Include="src\SoundDevice.cpp" />
+    <ClCompile Include="src\SoundSource.cpp" />
     <ClCompile Include="src\TrainingFramework.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GSCredit.h" />
     <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\classSound.h" />
     <ClInclude Include="src\GameConfig.h" />
     <ClInclude Include="src\GameManager\ResourceManagers.h" />
     <ClInclude Include="src\GameManager\Singleton.h" />
@@ -385,6 +392,11 @@
     <ClInclude Include="src\GameStates\GSIntro.h" />
     <ClInclude Include="src\GameStates\GSMenu.h" />
     <ClInclude Include="src\GameStates\GSPlay.h" />
+    <ClInclude Include="src\GameStates\GSSetting.h" />
+    <ClInclude Include="src\GameStates\GSTemp.h" />
+    <ClInclude Include="src\SoundBuffer.h" />
+    <ClInclude Include="src\SoundDevice.h" />
+    <ClInclude Include="src\SoundSource.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

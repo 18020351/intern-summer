@@ -75,6 +75,16 @@
     <ClCompile Include="src\GameObject\AnimationSprite.cpp">
       <Filter>TrainingFramework\src\GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameStates\GSTemp.cpp">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="src\classSound.cpp" />
+    <ClCompile Include="src\SoundDevice.cpp" />
+    <ClCompile Include="src\SoundSource.cpp" />
+    <ClCompile Include="src\SoundBuffer.cpp" />
+    <ClCompile Include="src\GameStates\GSSetting.cpp">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h">
@@ -139,6 +149,16 @@
     </ClInclude>
     <ClInclude Include="src\GameObject\AnimationSprite.h">
       <Filter>TrainingFramework\src\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameStates\GSTemp.h">
+      <Filter>TrainingFramework\src\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="src\classSound.h" />
+    <ClInclude Include="src\SoundDevice.h" />
+    <ClInclude Include="src\SoundSource.h" />
+    <ClInclude Include="src\SoundBuffer.h" />
+    <ClInclude Include="src\GameStates\GSSetting.h">
+      <Filter>TrainingFramework\src\GameStates</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

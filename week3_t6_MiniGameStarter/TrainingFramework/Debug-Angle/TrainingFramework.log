@@ -1,25 +1,26 @@
 ﻿  GSPlay.cpp
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(45,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(45,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(49,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(49,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(53,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(53,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(58,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(58,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(62,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(62,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(66,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(66,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(95,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(208,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(220,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(232,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(280,13): warning C4553: '==': result of expression not used; did you intend '='?
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(283,13): warning C4553: '==': result of expression not used; did you intend '='?
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(289,17): warning C4305: '-=': truncation from 'double' to 'float'
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(290,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(296,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(43,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(43,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(47,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(47,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(51,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(51,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(56,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(56,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(60,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(60,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(64,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(64,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(110,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(227,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(239,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(251,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(308,13): warning C4553: '==': result of expression not used; did you intend '='?
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(311,13): warning C4553: '==': result of expression not used; did you intend '='?
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(317,17): warning C4305: '-=': truncation from 'double' to 'float'
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(318,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(322,17): warning C4305: '+=': truncation from 'double' to 'float'
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(324,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
@@ -40,5 +41,5 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Ty=Text
           ]
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(88): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&)' being compiled
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(103): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&)' being compiled
   TrainingFramework.vcxproj -> D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\BIN-Angle\TrainingFramework.exe

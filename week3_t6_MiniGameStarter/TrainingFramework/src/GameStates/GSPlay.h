@@ -1,6 +1,8 @@
 #pragma once
 #include "GameStateBase.h"
 #include <iostream>
+#include"classSound.h"
+
 
 
 class Sprite2D;
@@ -43,9 +45,15 @@ private:
 
 	std::shared_ptr<AnimationSprite>	m_bird;
 	
+	std::shared_ptr<Text>		m_text_replay;
+
 	std::shared_ptr<Sprite2D>	m_sand;
 	std::shared_ptr<Text>		m_score;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
+
+	classSound* sound_wing = new classSound("../Data/Textures/sound/wing.wav");;
+	classSound* sound_point = new classSound("../Data/Textures/sound/point.wav");
+	classSound* sound_die = new classSound("../Data/Textures/sound/hit.wav");
 
 	float velocity = 100;
 
