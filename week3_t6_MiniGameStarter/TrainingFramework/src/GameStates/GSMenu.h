@@ -29,5 +29,6 @@ private:
 	std::shared_ptr<Text>					m_textGameCredit;
 	std::shared_ptr<Text>					m_textGameSetting;
 	std::shared_ptr<Text>					m_textGamePlay;
+	std::shared_ptr<Text>					m_textHighScore;
 };
 

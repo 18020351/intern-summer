@@ -9,6 +9,7 @@
 #include "Text.h"
 #include "GameButton.h"
 
+
 GSSetting::GSSetting(){}
 GSSetting::~GSSetting(){}
 
@@ -26,30 +27,54 @@ void GSSetting::Init()
 	m_background->SetSize(Globals::screenWidth, Globals::screenHeight);
 
 	// button on sound
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_music.tga");
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_sfx.tga");
 	std::shared_ptr<GameButton> button_onSound = std::make_shared<GameButton>(model, shader, texture);
-	button_onSound->Set2DPosition(200, 400);
+	button_onSound->Set2DPosition(200, 300);
 	button_onSound->SetSize(55, 55);
 	button_onSound->SetOnClick([]() {
 		Globals::isSound = true;
-		classSound* onSound = new classSound("../Data/Textures/sound/point.wav");
-		onSound->classSound::PlaySound();
+		ClassSound* onSound = new ClassSound("../Data/Textures/sound/point.wav");
+		onSound->ClassSound::PlaySound();
 		});
 	m_listButton.push_back(button_onSound);
 
 	//button off sound
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_music_off.tga");
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_sfx_off.tga");
 	std::shared_ptr<GameButton>  button_offSound = std::make_shared<GameButton>(model, shader, texture);
-	button_offSound->Set2DPosition(200, 500);
+	button_offSound->Set2DPosition(200, 400);
 	button_offSound->SetSize(55, 55);
 	button_offSound->SetOnClick([]() {
 		Globals::isSound = false;
-		classSound* onSound = new classSound("../Data/Textures/sound/point.wav");
-		onSound->classSound::PlaySound();
+		ClassSound* onSound = new ClassSound("../Data/Textures/sound/point.wav");
+		onSound->ClassSound::PlaySound();
 		});
 	m_listButton.push_back(button_offSound);
+	// button on music
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_music.tga");
+	std::shared_ptr<GameButton>  button_onMusic = std::make_shared<GameButton>(model, shader, texture);
+	button_onMusic->Set2DPosition(200, 500);
+	button_onMusic->SetSize(55, 55);
+	button_onMusic->SetOnClick([]() {
+		Globals::isMusic = true;
+		GSPlay::music_bg->PlaySound();
+		ClassSound* onSound = new ClassSound("../Data/Textures/sound/point.wav");
+		onSound->ClassSound::PlaySound();
+		});
+	m_listButton.push_back(button_onMusic);
+	// button off music
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_music_off.tga");
+	std::shared_ptr<GameButton>  button_offMusic = std::make_shared<GameButton>(model, shader, texture);
+	button_offMusic->Set2DPosition(200, 600);
+	button_offMusic->SetSize(55, 55);
+	button_offMusic->SetOnClick([]() {
+		Globals::isMusic = false;
+		GSPlay::music_bg->Stop();
+		ClassSound* onSound = new ClassSound("../Data/Textures/sound/point.wav");
+		onSound->ClassSound::PlaySound();
+		});
+	m_listButton.push_back(button_offMusic);
 	// button prev
-	// button prev
+
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_prev.tga");
 	std::shared_ptr<GameButton>  button = std::make_shared<GameButton>(model, shader, texture);
 	button->Set2DPosition(50, 50);
@@ -58,16 +83,22 @@ void GSSetting::Init()
 		GameStateMachine::GetInstance()->PopState();
 		});
 	m_listButton.push_back(button);
-	//title resume
+	//title on sound
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
 	m_text_onSound = std::make_shared< Text>(shader, font, "On Sound", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
-	m_text_onSound->Set2DPosition(Vector2(160, 450));
-	// tile replay
+	m_text_onSound->Set2DPosition(Vector2(155, 350));
+	// tile off sound
 
 	m_text_offSound = std::make_shared< Text>(shader, font, "Off Sound", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
-	m_text_offSound->Set2DPosition(Vector2(160, 550));
+	m_text_offSound->Set2DPosition(Vector2(155, 450));
 
+	// title on music
+	m_text_onMusic = std::make_shared< Text>(shader, font, "On Music", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
+	m_text_onMusic->Set2DPosition(Vector2(155, 550));
+	// title off music
+	m_text_offMusic = std::make_shared< Text>(shader, font, "Off Music", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
+	m_text_offMusic->Set2DPosition(Vector2(155, 650));
 }
 
 void GSSetting::Exit()
@@ -124,4 +155,6 @@ void GSSetting::Draw()
 	}
 	m_text_onSound->Draw();
 	m_text_offSound->Draw();
+	m_text_onMusic->Draw();
+	m_text_offMusic->Draw();
 }

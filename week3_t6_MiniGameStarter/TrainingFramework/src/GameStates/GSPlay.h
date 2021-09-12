@@ -2,8 +2,8 @@
 #include "GameStateBase.h"
 #include <iostream>
 #include"classSound.h"
-
-
+#include<vector>
+#include<fstream>
 
 class Sprite2D;
 class Sprite3D;
@@ -30,7 +30,14 @@ public:
 	void	HandleMouseMoveEvents(int x, int y) override;
 	void	Update(float deltaTime) override;
 	void	Draw() override;
+
 	bool Check_collision();
+
+	int inFile(std::string fileName);
+
+	void outFile(std::string fileName, int Max_score);
+
+	static ClassSound* music_bg;
 
 private:
 	std::shared_ptr<Sprite2D>	m_background;
@@ -44,16 +51,15 @@ private:
 	std::shared_ptr<Sprite2D>	m_tube3_up;
 
 	std::shared_ptr<AnimationSprite>	m_bird;
-	
-	std::shared_ptr<Text>		m_text_replay;
-
 	std::shared_ptr<Sprite2D>	m_sand;
+	std::shared_ptr<Text>		m_text_Highscore;
 	std::shared_ptr<Text>		m_score;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 
-	classSound* sound_wing = new classSound("../Data/Textures/sound/wing.wav");;
-	classSound* sound_point = new classSound("../Data/Textures/sound/point.wav");
-	classSound* sound_die = new classSound("../Data/Textures/sound/hit.wav");
+	ClassSound* sound_wing = new ClassSound("../Data/Textures/sound/wing.wav");;
+	ClassSound* sound_point = new ClassSound("../Data/Textures/sound/point.wav");
+	ClassSound* sound_die = new ClassSound("../Data/Textures/sound/hit.wav");
+	
 
 	float velocity = 100;
 
@@ -80,5 +86,7 @@ private:
 	bool tube1_pass = false;
 	bool tube2_pass = false;
 	bool tube3_pass = false;
+
+	GLfloat m_time;
 };
 

@@ -1,45 +1,135 @@
-﻿  GSPlay.cpp
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(43,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(43,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(47,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(47,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(51,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(51,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(56,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(56,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(60,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(60,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(64,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(64,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(110,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(227,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(239,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(251,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(308,13): warning C4553: '==': result of expression not used; did you intend '='?
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(311,13): warning C4553: '==': result of expression not used; did you intend '='?
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(317,17): warning C4305: '-=': truncation from 'double' to 'float'
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(318,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(322,17): warning C4305: '+=': truncation from 'double' to 'float'
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(324,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  GSCredit.cpp
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
               _Ty=double
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2029): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(_Ty &,std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&) noexcept(false)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2029): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[18],TextColor,double>(_Ty &,std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[18],TextColor &&,double &&) noexcept(false)' being compiled
           with
           [
               _Ty=Text
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[18],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[18],TextColor &&,double &&)' being compiled
           with
           [
               _Ty=Text
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[18],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[18],TextColor &&,double &&)' being compiled
           with
           [
               _Ty=Text
           ]
-D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(103): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::string&,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::string &,TextColor &&,double &&)' being compiled
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\GSCredit.cpp(43): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,const char(&)[18],TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,const char (&)[18],TextColor &&,double &&)' being compiled
+  Application.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2029): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,int,int,int&,int,int&,float,float,float>(_Ty &,int &&,int &&,int &,int &&,int &,float &&,float &&,float &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Camera
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
+          with
+          [
+              _Ty=Camera
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
+          with
+          [
+              _Ty=Camera
+          ]
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\Application.cpp(22): message : see reference to function template instantiation 'std::shared_ptr<Camera> std::make_shared<Camera,int,int,int&,int,int&,float,float,float>(int &&,int &&,int &,int &&,int &,float &&,float &&,float &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'GLfloat', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  classSound.cpp
+  ResourceManagers.cpp
+  AnimationSprite.cpp
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\AnimationSprite.cpp(77,39): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\AnimationSprite.cpp(82,39): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Font.cpp
+  GameButton.cpp
+  ParallelBG.cpp
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\ParallelBG.cpp(77,39): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\ParallelBG.cpp(82,39): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Sprite2D.cpp
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\Sprite2D.cpp(130,19): warning C4244: 'return': conversion from 'GLfloat' to 'int', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\Sprite2D.cpp(133,19): warning C4244: 'return': conversion from 'GLfloat' to 'int', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\Sprite2D.cpp(136,34): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\Sprite2D.cpp(136,24): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\Sprite2D.cpp(144,29): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Camera.cpp
+  Sprite3D.cpp
+  Model.cpp
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameObject\Model.cpp(25,18): warning C4244: 'initializing': conversion from 'std::streamoff' to 'size_t', possible loss of data
+  Shader.cpp
+  Text.cpp
+  Texture.cpp
+  GameStateBase.cpp
+  GameStateMachine.cpp
+  GSIntro.cpp
+  GSMenu.cpp
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(24,78): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(24,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSMenu.cpp(66,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GSPlay.cpp
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(41,41): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(75,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(75,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(79,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(79,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(83,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(83,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(88,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(88,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(92,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(92,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(96,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(96,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(150,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(267,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(279,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(291,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(361,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(367,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xutility(158,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2029): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TextColor,double>(_Ty &,std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TextColor &&,double &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TextColor &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\memory(2748): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TextColor &&,double &&)' being compiled
+          with
+          [
+              _Ty=Text
+          ]
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSPlay.cpp(140): message : see reference to function template instantiation 'std::shared_ptr<Text> std::make_shared<Text,std::shared_ptr<Shader>&,std::shared_ptr<Font>&,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,TextColor,double>(std::shared_ptr<Shader> &,std::shared_ptr<Font> &,std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&,TextColor &&,double &&)' being compiled
+  Generating Code...
+  Compiling...
+  GSScore.cpp
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\GameStates\GSScore.cpp(30,41): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  GSSetting.cpp
+  GSTemp.cpp
+  SoundBuffer.cpp
+  SoundDevice.cpp
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\SoundDevice.cpp(35,1): warning C4297: 'SoundDevice::~SoundDevice': function assumed not to throw an exception but does
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\SoundDevice.cpp(35,1): message : destructor or deallocator has a (possibly implicit) non-throwing exception specification
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\SoundDevice.cpp(39,1): warning C4297: 'SoundDevice::~SoundDevice': function assumed not to throw an exception but does
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\SoundDevice.cpp(39,1): message : destructor or deallocator has a (possibly implicit) non-throwing exception specification
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\SoundDevice.cpp(42,1): warning C4297: 'SoundDevice::~SoundDevice': function assumed not to throw an exception but does
+D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\TrainingFramework\src\SoundDevice.cpp(42,1): message : destructor or deallocator has a (possibly implicit) non-throwing exception specification
+  SoundSource.cpp
+  TrainingFramework.cpp
+  Generating Code...
+GSCredit.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   TrainingFramework.vcxproj -> D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\BIN-Angle\TrainingFramework.exe

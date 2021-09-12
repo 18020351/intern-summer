@@ -23,11 +23,11 @@ void GSMenu::Init()
 	m_background = std::make_shared<Sprite2D>(model, shader, texture);
 	m_background->Set2DPosition(Globals::screenWidth / 2, Globals::screenHeight / 2);
 	m_background->SetSize(Globals::screenWidth, Globals::screenHeight);
-
+	
 	// play button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_play.tga");
 	std::shared_ptr<GameButton> button_play = std::make_shared<GameButton>(model, shader, texture);
-	button_play->Set2DPosition(200, 400);
+	button_play->Set2DPosition(200, 345);
 	button_play->SetSize(55, 55);
 	button_play->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
@@ -36,16 +36,25 @@ void GSMenu::Init()
 	// setting button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_settings.tga");
 	std::shared_ptr<GameButton> button_setting = std::make_shared<GameButton>(model, shader, texture);
-	button_setting->Set2DPosition(200, 500);
+	button_setting->Set2DPosition(200, 445);
 	button_setting->SetSize(55, 55);
 	button_setting->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_SETTING);
 		});
 	m_listButton.push_back(button_setting);
+	//high score button
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_menu.tga");
+	std::shared_ptr<GameButton> button_HighScore = std::make_shared<GameButton>(model, shader, texture);
+	button_HighScore->Set2DPosition(200, 545);
+	button_HighScore->SetSize(55, 55);
+	button_HighScore->SetOnClick([]() {
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_HIGHSCORE);
+		});
+	m_listButton.push_back(button_HighScore);
 	// credit button
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_help.tga");
 	std::shared_ptr<GameButton> button_credit = std::make_shared<GameButton>(model, shader, texture);
-	button_credit->Set2DPosition(200, 600);
+	button_credit->Set2DPosition(200, 645);
 	button_credit->SetSize(55, 55);
 	button_credit->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CREDIT);
@@ -68,12 +77,14 @@ void GSMenu::Init()
 	m_textGamePlay = std::make_shared< Text>(shader, font, "Play", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
 	m_textGameSetting = std::make_shared< Text>(shader, font, "Setting", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
 	m_textGameCredit = std::make_shared< Text>(shader, font, "Credit", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
+	m_textHighScore = std::make_shared< Text>(shader, font, "High Score", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
 
-	m_textGameName->Set2DPosition(Vector2(20, 300));
-	m_textGamePlay->Set2DPosition(Vector2(175, 450));
-	m_textGameSetting->Set2DPosition(Vector2(165, 550));
-	m_textGameCredit->Set2DPosition(Vector2(165, 650));
-
+	m_textGameName->Set2DPosition(Vector2(20, 295));
+	m_textGamePlay->Set2DPosition(Vector2(175, 395));
+	m_textGameSetting->Set2DPosition(Vector2(165, 495));
+	m_textHighScore->Set2DPosition(Vector2(150, 595));
+	m_textGameCredit->Set2DPosition(Vector2(165, 695));
+	
 
 }
 
@@ -134,4 +145,5 @@ void GSMenu::Draw()
 	m_textGamePlay->Draw();
 	m_textGameSetting->Draw();
 	m_textGameCredit->Draw();
+	m_textHighScore->Draw();
 }

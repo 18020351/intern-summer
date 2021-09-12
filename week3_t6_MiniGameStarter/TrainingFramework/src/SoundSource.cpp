@@ -3,6 +3,7 @@
 
 SoundSource::SoundSource()
 {
+	isStopped = false;
 	alGenSources(1, &p_Source);
 	alSourcef(p_Source, AL_PITCH, p_Pitch);
 	alSourcef(p_Source, AL_GAIN, p_Gain);
@@ -29,11 +30,41 @@ void SoundSource::Play(const ALuint buffer_to_play)
 
 
 	ALint state = AL_PLAYING;
-////	std::cout << "playing sound\n";
-//	while (state == al_playing && algeterror() == al_no_error)
-//	{
-//		//std::cout << "currently playing sound\n";
-//		algetsourcei(p_source, al_source_state, &state);
-//	}
-//	//std::cout << "done playing sound\n";
+	std::cout << "playing sound\n";
+	while (state == AL_PLAYING && alGetError() == AL_NO_ERROR)
+	{
+		std::cout << "currently playing sound\n";
+		alGetSourcei(p_Source, AL_SOURCE_STATE, &state);
+	}
+	std::cout << "done playing sound\n";
+}
+void SoundSource::PlayLoop(const ALuint buffer_to_play)
+{
+	isStopped = false;
+	if (buffer_to_play != p_Buffer)
+	{
+		p_Buffer = buffer_to_play;
+		alSourcei(p_Source, AL_BUFFER, (ALint)p_Buffer);
+	}
+	while (!isStopped) {
+		alSourcePlay(p_Source);
+
+		ALint state = AL_PLAYING;
+		std::cout << "playing sound\n";
+		while (state == AL_PLAYING && alGetError() == AL_NO_ERROR)
+		{
+			std::cout << "currently playing sound\n";
+			alGetSourcei(p_Source, AL_SOURCE_STATE, &state);
+		}
+		std::cout << "done playing sound\n";
+	}
+}
+void SoundSource::Stop(const ALuint buffer_to_play) {
+	isStopped = true;
+	if (buffer_to_play != p_Buffer)
+	{
+		p_Buffer = buffer_to_play;
+		alSourcei(p_Source, AL_BUFFER, (ALint)p_Buffer);
+	}
+	alSourceStop(p_Source);
 }

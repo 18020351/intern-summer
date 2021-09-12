@@ -1,6 +1,8 @@
 #pragma once
 #include "GameStateBase.h"
 #include"classSound.h"
+#include"GSPlay.h"
+
 
 class Sprite2D;
 class Sprite3D;
@@ -29,6 +31,8 @@ private:
 	std::shared_ptr<Sprite2D>	m_background;
 	std::shared_ptr<Text>		m_text_onSound;
 	std::shared_ptr<Text>		m_text_offSound;
+	std::shared_ptr<Text>		m_text_onMusic;
+	std::shared_ptr<Text>		m_text_offMusic;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 };
 

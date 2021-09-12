@@ -24,6 +24,7 @@ public:
 	static int Globals::screenWidth;
 	static int Globals::screenHeight;
 	static bool Globals::isSound;
+	static bool Globals::isMusic;
 };
 
 // define value

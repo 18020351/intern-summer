@@ -1,5 +1,5 @@
 #include "SoundDevice.h"
-#include <AL\al.h>
+#include<../../vcpkg/installed/x86-windows/include/AL/al.h>
 #include <stdio.h>
 
 SoundDevice* SoundDevice::get()
@@ -29,7 +29,7 @@ SoundDevice::SoundDevice()
 	printf("Opened \"%s\"\n", name);
 }
 
-SoundDevice::~SoundDevice()
+SoundDevice::~SoundDevice() 
 {
 	if (!alcMakeContextCurrent(nullptr))
 		throw("failed to set context to nullptr");

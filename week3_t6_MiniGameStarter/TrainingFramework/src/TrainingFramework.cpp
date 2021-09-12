@@ -3,9 +3,12 @@
 #include "Application.h"
 #include "utilities.h" 
 
+
+
 int Globals::screenWidth = 400;
 int Globals::screenHeight = 700;
 bool Globals::isSound = true;
+bool Globals::isMusic = true;
 
 GLint Init(ESContext* esContext)
 {

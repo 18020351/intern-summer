@@ -350,6 +350,7 @@
     <ClCompile Include="src\GameObject\AnimationSprite.cpp" />
     <ClCompile Include="src\GameObject\Font.cpp" />
     <ClCompile Include="src\GameObject\GameButton.cpp" />
+    <ClCompile Include="src\GameObject\ParallelBG.cpp" />
     <ClCompile Include="src\GameObject\Sprite2D.cpp" />
     <ClCompile Include="src\GameObject\Camera.cpp" />
     <ClCompile Include="src\GameObject\Sprite3D.cpp" />
@@ -362,6 +363,7 @@
     <ClCompile Include="src\GameStates\GSIntro.cpp" />
     <ClCompile Include="src\GameStates\GSMenu.cpp" />
     <ClCompile Include="src\GameStates\GSPlay.cpp" />
+    <ClCompile Include="src\GameStates\GSScore.cpp" />
     <ClCompile Include="src\GameStates\GSSetting.cpp" />
     <ClCompile Include="src\GameStates\GSTemp.cpp" />
     <ClCompile Include="src\SoundBuffer.cpp" />
@@ -380,6 +382,7 @@
     <ClInclude Include="src\GameObject\BaseObject.h" />
     <ClInclude Include="src\GameObject\Font.h" />
     <ClInclude Include="src\GameObject\GameButton.h" />
+    <ClInclude Include="src\GameObject\ParallelBG.h" />
     <ClInclude Include="src\GameObject\Sprite2D.h" />
     <ClInclude Include="src\GameObject\Camera.h" />
     <ClInclude Include="src\GameObject\Sprite3D.h" />
@@ -392,6 +395,7 @@
     <ClInclude Include="src\GameStates\GSIntro.h" />
     <ClInclude Include="src\GameStates\GSMenu.h" />
     <ClInclude Include="src\GameStates\GSPlay.h" />
+    <ClInclude Include="src\GameStates\GSScore.h" />
     <ClInclude Include="src\GameStates\GSSetting.h" />
     <ClInclude Include="src\GameStates\GSTemp.h" />
     <ClInclude Include="src\SoundBuffer.h" />
@@ -400,6 +404,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\score.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="src\GameStates\wing.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

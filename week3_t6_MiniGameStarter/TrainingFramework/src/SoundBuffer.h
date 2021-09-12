@@ -1,6 +1,10 @@
 #pragma once
-#include <AL\al.h>
 #include <vector>
+
+#include<../../vcpkg/installed/x86-windows/include/AL/alc.h>
+#include <../../vcpkg/installed/x86-windows/include/AL/alext.h>
+#include<../../vcpkg/installed/x86-windows/include/AL/al.h>
+
 class SoundBuffer
 {
 public:

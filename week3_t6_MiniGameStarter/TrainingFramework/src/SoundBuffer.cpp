@@ -1,8 +1,7 @@
 #include "SoundBuffer.h"
-#include <sndfile.h>
-#include <inttypes.h>
-#include<AL/alext.h>
-
+#include <../../vcpkg/installed/x86-windows/include/AL/alext.h>
+#include <../../vcpkg/installed/x86-windows/include/sndfile.h>
+#include "inttypes.h"
 SoundBuffer* SoundBuffer::get()
 {
 	static SoundBuffer* sndbuf = new SoundBuffer();

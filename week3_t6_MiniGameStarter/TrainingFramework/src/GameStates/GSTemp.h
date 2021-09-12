@@ -13,11 +13,13 @@ private:
 	std::shared_ptr<Sprite2D>	m_background;
 	std::shared_ptr<Text>		m_text_resume;
 	std::shared_ptr<Text>		m_text_replay;
+	std::shared_ptr<Text>		m_text_HighScore;
 	std::shared_ptr<Text>		m_text_setting;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 public:
 	GSTemp();
 	~GSTemp();
+	
 	void	Init() override;
 	void	Exit() override;
 

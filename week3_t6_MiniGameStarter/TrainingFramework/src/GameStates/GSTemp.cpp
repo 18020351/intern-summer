@@ -26,7 +26,7 @@ void GSTemp::Init()
 	// button resume
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_play.tga");
 	std::shared_ptr<GameButton> button_resume = std::make_shared<GameButton>(model, shader, texture);
-	button_resume->Set2DPosition(200, 400);
+	button_resume->Set2DPosition(200, 345);
 	button_resume->SetSize(55, 55);
 	button_resume->SetOnClick([]() {
 		GameStateMachine::GetInstance()->PopState();
@@ -36,16 +36,25 @@ void GSTemp::Init()
 	//button replay
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_restart.tga");
 	std::shared_ptr<GameButton>  button_replay = std::make_shared<GameButton>(model, shader, texture);
-	button_replay->Set2DPosition(200, 500);
+	button_replay->Set2DPosition(200, 445);
 	button_replay->SetSize(55, 55);
 	button_replay->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
 		});
 	m_listButton.push_back(button_replay);
+	//button high score
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_menu.tga");
+	std::shared_ptr<GameButton> button_HighScore = std::make_shared<GameButton>(model, shader, texture);
+	button_HighScore->Set2DPosition(200, 545);
+	button_HighScore->SetSize(55, 55);
+	button_HighScore->SetOnClick([]() {
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_HIGHSCORE);
+		});
+	m_listButton.push_back(button_HighScore);
 	//button setting
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_settings.tga");
 	std::shared_ptr<GameButton> button_setting = std::make_shared<GameButton>(model, shader, texture);
-	button_setting->Set2DPosition(200, 600);
+	button_setting->Set2DPosition(200, 645);
 	button_setting->SetSize(55, 55);
 	button_setting->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_SETTING);
@@ -55,13 +64,16 @@ void GSTemp::Init()
 	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
 	m_text_resume = std::make_shared< Text>(shader, font, "Resume", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
-	m_text_resume->Set2DPosition(Vector2(165, 450));
+	m_text_resume->Set2DPosition(Vector2(165, 395));
 	// tile replay
 	m_text_replay = std::make_shared< Text>(shader, font, "Replay", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
-	m_text_replay->Set2DPosition(Vector2(165, 550));
+	m_text_replay->Set2DPosition(Vector2(165, 495));
+	//title high score
+	m_text_HighScore = std::make_shared< Text>(shader, font, "High Score", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
+	m_text_HighScore->Set2DPosition(Vector2(150, 595));
 	// title setting
 	m_text_setting = std::make_shared< Text>(shader, font, "Setting", Vector4(0.5f, 0.5f, 0.0f, 1.0f), 1.0f);
-	m_text_setting->Set2DPosition(Vector2(160, 650));
+	m_text_setting->Set2DPosition(Vector2(160, 695));
 }
 
 void GSTemp::Exit()
@@ -119,4 +131,5 @@ void GSTemp::Draw()
 	m_text_resume->Draw();
 	m_text_replay->Draw();
 	m_text_setting->Draw();
+	m_text_HighScore->Draw();
 }

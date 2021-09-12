@@ -1,6 +1,6 @@
 #pragma once
-#include <AL\alc.h>
-
+#include<../../vcpkg/installed/x86-windows/include/AL/al.h>
+#include "../../vcpkg/installed/x86-windows/include/AL/alc.h"
 class SoundDevice
 {
 public:
