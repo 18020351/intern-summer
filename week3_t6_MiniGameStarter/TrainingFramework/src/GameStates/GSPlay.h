@@ -10,6 +10,7 @@ class Sprite3D;
 class Text;
 class GameButton;
 class AnimationSprite;
+class ParallelBG;
 
 class GSPlay :
 	public GameStateBase
@@ -40,7 +41,8 @@ public:
 	static ClassSound* music_bg;
 
 private:
-	std::shared_ptr<Sprite2D>	m_background;
+	std::shared_ptr<ParallelBG>	m_background;
+	
 
 	std::shared_ptr<Sprite2D>	m_tube1_dow;
 	std::shared_ptr<Sprite2D>	m_tube2_dow;
@@ -52,7 +54,6 @@ private:
 
 	std::shared_ptr<AnimationSprite>	m_bird;
 	std::shared_ptr<Sprite2D>	m_sand;
-	std::shared_ptr<Text>		m_text_Highscore;
 	std::shared_ptr<Text>		m_score;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
 
@@ -61,7 +62,7 @@ private:
 	ClassSound* sound_die = new ClassSound("../Data/Textures/sound/hit.wav");
 	
 
-	float velocity = 100;
+	float velocity = 100.0f;
 
 	int x_bird = 50;
 	float y_bird = 350.0;
@@ -87,6 +88,5 @@ private:
 	bool tube2_pass = false;
 	bool tube3_pass = false;
 
-	GLfloat m_time;
 };
 

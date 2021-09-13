@@ -19,6 +19,17 @@ void GSIntro::Init()
 	m_logo = std::make_shared<Sprite2D>(model, shader, texture);
 	m_logo->Set2DPosition((float)Globals::screenWidth/2, (float)Globals::screenHeight/2);
 	m_logo->SetSize(400, 700);
+
+	/*ResourceManagers::GetInstance()->AddTexture("bird.tga");
+	ResourceManagers::GetInstance()->AddTexture("Sprite2D.nfg");
+	ResourceManagers::GetInstance()->AddShader("AnimationShader");
+	ResourceManagers::GetInstance()->AddTexture("./images/img_bg1.tga");
+	ResourceManagers::GetInstance()->AddTexture("tube_dow.tga");
+	ResourceManagers::GetInstance()->AddTexture("tube_up.tga");
+	ResourceManagers::GetInstance()->AddTexture("btn_prev.tga");
+	ResourceManagers::GetInstance()->AddTexture("btn_pause.tga");
+	ResourceManagers::GetInstance()->AddTexture("btn_restart.tga");*/
+
 }
 
 void GSIntro::Exit()

@@ -1,0 +1,6 @@
+﻿  esShader.cpp
+  esUtil.cpp
+  esUtil_win.cpp
+  CMath.cpp
+  TGA.cpp
+  Utilities.vcxproj -> D:\Intern-Summer-GL\intern-summer\week3_t6_MiniGameStarter\BIN-Nvidia\Utilities.lib

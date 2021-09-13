@@ -20,17 +20,17 @@ int GSScore::inFile(std::string fileName) {
 	ifstream f(fileName);
 	string maxScore;
 	f >> maxScore;
-	maxScore.reserve();
-	int n = atoi(maxScore.c_str());
-	int decimalNumber = 0, i = 0, remainder;
-	while (n != 0)
+	reverse(maxScore.begin(), maxScore.end());
+	long long binarynum = stoi(maxScore);
+	int decimalnum = 0, temp = 0, remainder;
+	while (binarynum != 0)
 	{
-		remainder = n % 10;
-		n /= 10;
-		decimalNumber += remainder * pow(2, i);
-		++i;
+		remainder = binarynum % 10;
+		binarynum = binarynum / 10;
+		decimalnum = decimalnum + remainder * pow(2, temp);
+		temp++;
 	}
-	return (decimalNumber - 2) / 5;
+	return (decimalnum - 2) / 5;
 }
 void GSScore::Init()
 {

@@ -19,8 +19,8 @@
   ftsynth.c
   fttype1.c
   ftwinfnt.c
-  ftlcdfil.c
   ftxf86.c
+  ftlcdfil.c
   ftgxval.c
   ftotval.c
   ftpatent.c

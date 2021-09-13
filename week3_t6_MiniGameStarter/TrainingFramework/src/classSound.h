@@ -16,7 +16,6 @@ public:
 	void Play();
 	void PlayLoopSound();
 	void PlayLoop();
-	void StopSound();
 	void Stop();
 };
 

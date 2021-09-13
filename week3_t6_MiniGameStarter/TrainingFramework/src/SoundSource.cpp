@@ -30,13 +30,13 @@ void SoundSource::Play(const ALuint buffer_to_play)
 
 
 	ALint state = AL_PLAYING;
-	std::cout << "playing sound\n";
+	//std::cout << "playing sound\n";
 	while (state == AL_PLAYING && alGetError() == AL_NO_ERROR)
 	{
-		std::cout << "currently playing sound\n";
+		//std::cout << "currently playing sound\n";
 		alGetSourcei(p_Source, AL_SOURCE_STATE, &state);
 	}
-	std::cout << "done playing sound\n";
+	//std::cout << "done playing sound\n";
 }
 void SoundSource::PlayLoop(const ALuint buffer_to_play)
 {
@@ -50,13 +50,13 @@ void SoundSource::PlayLoop(const ALuint buffer_to_play)
 		alSourcePlay(p_Source);
 
 		ALint state = AL_PLAYING;
-		std::cout << "playing sound\n";
+		//std::cout << "playing sound\n";
 		while (state == AL_PLAYING && alGetError() == AL_NO_ERROR)
 		{
-			std::cout << "currently playing sound\n";
+			//std::cout << "currently playing sound\n";
 			alGetSourcei(p_Source, AL_SOURCE_STATE, &state);
 		}
-		std::cout << "done playing sound\n";
+		//std::cout << "done playing sound\n";
 	}
 }
 void SoundSource::Stop(const ALuint buffer_to_play) {

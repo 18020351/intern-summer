@@ -11,14 +11,16 @@
 #include <string>
 #include<fstream>
 #include "AnimationSprite.h"
+#include "ParallelBG.h"
 #include"classSound.h"
 #include"GameStateMachine.h"
 #include"Singleton.h"
+#include<iostream>
 using namespace std;
 
 ClassSound * GSPlay::music_bg  = new ClassSound("../Data/Textures/sound/music_bg.wav");
 
-GSPlay::GSPlay() :m_time(0.0f)
+GSPlay::GSPlay()
 {
 }
 
@@ -30,18 +32,18 @@ GSPlay::~GSPlay()
 int GSPlay::inFile(std::string fileName) {
 	ifstream f(fileName);
 	string maxScore;
-	f >> maxScore;
-	maxScore.reserve();
-	int n = atoi(maxScore.c_str());
-	int decimalNumber = 0, i = 0, remainder;
-	while (n != 0)
+	f>>maxScore;
+	reverse(maxScore.begin(), maxScore.end());
+	long long binarynum = stoi(maxScore);
+	int decimalnum = 0, temp = 0, remainder;
+	while (binarynum != 0)
 	{
-		remainder = n % 10;
-		n /= 10;
-		decimalNumber += remainder * pow(2, i);
-		++i;
+		remainder = binarynum % 10;
+		binarynum = binarynum / 10;
+		decimalnum = decimalnum + remainder * pow(2, temp);
+		temp++;
 	}
-	return (decimalNumber-2)/5;
+	return (decimalnum - 2)/5;
 }
 void GSPlay::outFile(std::string fileName, int Max_score) {
 	int temp1 = Max_score * 5 + 2; // tự quy ước
@@ -52,7 +54,6 @@ void GSPlay::outFile(std::string fileName, int Max_score) {
 		s += std::to_string(temp);
 	}
 	ofstream outfile(fileName);
-	//s.reserve();
 	outfile << s;
 }
 void GSPlay::Init()
@@ -62,13 +63,13 @@ void GSPlay::Init()
 	}
 
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("./images/bg_play.tga");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("./images/img_bg1.tga");
 
 	// background
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
-	m_background = std::make_shared<Sprite2D>(model, shader, texture);
-	m_background->Set2DPosition((float)Globals::screenWidth / 2, (float)Globals::screenHeight / 2);
-	m_background->SetSize(Globals::screenWidth, Globals::screenHeight);
+	m_background = std::make_shared<ParallelBG>(model, shader, texture, 100.0f);
+	
+
 	// tube dow
 	texture = ResourceManagers::GetInstance()->GetTexture("tube_dow.tga");
 	m_tube1_dow = std::make_shared<Sprite2D>(model, shader, texture);
@@ -96,11 +97,6 @@ void GSPlay::Init()
 	m_tube3_up->Set2DPosition(tube3_x, tube3_height + d_2tube + (700 - tube3_height - d_2tube) / 2);
 	m_tube3_up->SetSize(tube_width,700 - tube3_height - d_2tube);
 	
-	// sand
-	texture = ResourceManagers::GetInstance()->GetTexture("sand1.tga");
-	m_sand = std::make_shared<Sprite2D>(model, shader, texture);
-	m_sand->Set2DPosition(0, 670);
-	m_sand->SetSize(800, 60);
 	// button prev
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_prev.tga");
 	std::shared_ptr<GameButton>  button = std::make_shared<GameButton>(model, shader, texture);
@@ -140,9 +136,6 @@ void GSPlay::Init()
 	m_score = std::make_shared< Text>(shader, font, "Score: " + std::to_string(score), TextColor::RED, 0.8);
 	m_score->Set2DPosition(Vector2(5, 20));
 
-	m_text_Highscore = std::make_shared<Text>(shader, font, "Highest Score: " + std::to_string(inFile("src/score.txt")), TextColor::RED, 0.8);
-	m_text_Highscore->Set2DPosition(Vector2(200, 20));
-
 	// bird
 	texture = ResourceManagers::GetInstance()->GetTexture("bird.tga");
 	shader = ResourceManagers::GetInstance()->GetShader("AnimationShader");
@@ -177,10 +170,6 @@ void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 		{
 		case ' ':
 			keyPressed |= KEY_UP;
-			if (Globals::isSound) {
-				sound_wing->PlaySound();
-			}
-			
 			break;
 		default:
 			break;
@@ -191,6 +180,9 @@ void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 		{
 		case ' ':
 			keyPressed ^= KEY_UP;
+			if (Globals::isSound) {
+				sound_wing->PlaySound();
+			}
 			break;
 		default:
 			break;
@@ -219,7 +211,7 @@ bool GSPlay::Check_collision() {
 	if ((m_bird->Get_position_y() - bird_height/2) <= 0) {
 		return true;
 	}
-	if ((m_bird->Get_position_y() + bird_height / 2) >= 640) {
+	if ((m_bird->Get_position_y() + bird_height / 2) >= 700) {
 		return true;
 	}
 	if (m_bird->Get_position_x() + bird_width / 2 >= m_tube1_dow->Get_position_x() - tube_width / 2 &&
@@ -348,21 +340,28 @@ void GSPlay::Update(float deltaTime)
 		if (score == 15) {
 			velocity = 200;
 		}
-		if (score > 20) {
-			velocity = 300;
+		if (score == 17) {
+			velocity = 230;
 		}
-		if (score > 25) {
-			velocity = 350;
+		if (score == 20) {
+			velocity = 250;
+		}
+		if (score == 22) {
+			velocity = 270;
+		}
+		if (score == 25) {
+			velocity = 300;
 		}
 		//move bird
 		if (keyPressed & KEY_UP) {
 			//move up bird.
-			y_bird -= 0.5;
+			y_bird -= 0.4;
 			m_bird->Set2DPosition(x_bird, y_bird);	
+			
 		}
 		
 		if (!keyPressed) {
-			y_bird += 1.0;
+			y_bird += 0.8;
 			x_bird = x_bird;
 			m_bird->Set2DPosition(x_bird, y_bird);
 		}
@@ -371,7 +370,8 @@ void GSPlay::Update(float deltaTime)
 			it->Update(deltaTime);
 		}
 		m_bird->Update(deltaTime);
-		m_time += deltaTime;
+		m_background->Update(deltaTime);
+
 	}
 	else{	
 		auto shader = ResourceManagers::GetInstance()->GetShader("TextShader");
@@ -383,6 +383,7 @@ void GSPlay::Update(float deltaTime)
 		if (score > inFile("src/score.txt")) {
 			outFile("src/score.txt", score);
 		}
+		music_bg->Stop();
 	}
 	
 }
@@ -402,8 +403,7 @@ void GSPlay::Draw()
 	m_bird->Draw();
 
 	m_score->Draw();
-	m_sand->Draw();
-	//m_text_Highscore->Draw();
+	
 	for (auto it : m_listButton)
 	{
 		it->Draw();
